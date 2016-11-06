@@ -62,6 +62,12 @@ class NavigationController:
         latitude_input = generate_input_nav(current_position[1], self.previous_position[1],
                                             current_position_reference[1], self.previous_position_reference[1])
 
+        
+        print(longitude_input)
+        print(current_position[0])
+        print(current_position_reference[0])
+        print(self.longitude_u)
+        
         self.longitude_u = self.longitudeController.update(longitude_input, current_position[0],
                                                            current_position_reference[0], self.longitude_u)
         self.latitude_u = self.latitudeController.update(latitude_input, current_position[1],
